@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Anniversary Shubh ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(#ffd1e8, #fff);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Bullet */
+#bullet {
+    font-size: 65px;
+    cursor: pointer;
+    position: absolute;
+    transition: all 0.8s ease;
+}
+
+/* Envelope */
+#envelope {
+    width: 290px;
+    height: 185px;
+    background: #fff;
+    border-radius: 12px;
+    position: relative;
+    display: none;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.3);
+}
+
+#seal {
+    width: 65px;
+    height: 65px;
+    background: crimson;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Letter */
+#letter {
+    display: none;
+    background: #fff;
+    padding: 26px;
+    border-radius: 14px;
+    width: 340px;
+    text-align: center;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+    animation: pop 0.8s ease;
+}
+
+@keyframes pop {
+    0% {transform: scale(0.3); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+}
+
+h1 {
+    color: #e60073;
+    font-size: 22px;
+}
+
+p {
+    font-size: 15px;
+    color: #444;
+}
+
+/* Photos */
+.photos {
+    display: flex;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.photos img {
+    width: 150px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Final Popup */
+#popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#popupBox {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    width: 280px;
+    animation: pop 0.6s ease;
+}
+
+#popupBox h2 {
+    color: #e60073;
+    font-size: 20px;
+}
+
+#popupBox button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: none;
+    background: crimson;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+</audio>
+
+<div id="bullet">•</div>
+
+<div id="envelope">
+    <div id="seal">❤</div>
+</div>
+
+<div id="letter">
+    <h1>Happy 3rd Anniversary<br>mera pyaara baccha Shubh 🐻❤️</h1>
+
+    <div class="photos">
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+    </div>
+
+    <p><i>
+        “Tum meri aadat bhi ho aur meri shararat bhi 😌🔥  
+        Tumhare saath zindagi cute bhi lagti hai…  
+        aur thodi naughty bhi 💋”
+    </i></p>
+
+    <p>
+        Tum meri hasi ho, meri comfort ho,  
+        aur meri har raat ka favourite khayal ho 🌙💖  
+        3 saal ho gaye, aur mujhe ab bhi tum chahiye —  
+        har roz, har tarah se 🫶
+    </p>
+
+    <p>
+        🎶 Ye music isliye chal raha hai kyunki  
+        jaise ye background mein chupchaap rehta hai,  
+        waise hi tum mere dil mein — hamesha ❤️
+    </p>
+
+    <p><b>— Rashi 🌹</b></p>
+</div>
+
+<!-- Surprise Popup -->
+<div id="popup">
+    <div id="popupBox">
+        <h2>Hey Shubh 😏💋</h2>
+        <p>
+            Ab bas padhne ka time khatam…  
+            Come here, it’s my turn now ❤️🔥
+        </p>
+        <button onclick="closePopup()">Only Yours 😘</button>
+    </div>
+</div>
+
+<script>
+const bullet = document.getElementById("bullet");
+const envelope = document.getElementById("envelope");
+const seal = document.getElementById("seal");
+const letter = document.getElementById("letter");
+const music = document.getElementById("music");
+const popup = document.getElementById("popup");
+
+bullet.onclick = () => {
+    bullet.style.left = Math.random() * 80 + "%";
+    bullet.style.top = Math.random() * 80 + "%";
+
+    setTimeout(() => {
+        bullet.style.display = "nones
